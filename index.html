@@ -1,0 +1,64 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
+  <title>my-carousel demo</title>
+
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="img-carousel-elem.html">
+
+  <style>
+     img-carousel-elem {
+    width: 100%;
+    contain: content;
+  }
+
+  img-carousel-elem::after {
+    display: block;
+    content: '';
+    padding-top: 75%; /* 4:3 = height is 75% of width */
+  }
+
+  img-carousel-elem img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+  }
+
+  #img_container{
+      height: 260px;
+      width: 230px;
+      align-content: center;
+      border: 1px solid black;  
+  }
+  </style>
+</head>
+
+<body>
+<div id="img_container">
+  <img-carousel-elem>
+    <img src="images/Aurelio.jpg">
+    <img src="images/Caligula.jpg">
+    <img src="images/Caracalla.jpg">
+    <img src="images/Ciceron.jpg">
+    <img src="images/MarcoAurelio.jpg">
+  </img-carousel-elem>
+</div>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+ </body>
+</html>
